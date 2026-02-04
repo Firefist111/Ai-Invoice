@@ -14,7 +14,11 @@ const port = 3000;
 //middleware
 app.use(express.json({limit : "20mb"}))
 app.use(express.urlencoded({limit : "20mb" , extended : true}))
-app.use(cors())
+app.use(cors({
+  origin : '*',
+  methods : ['GET','POST','PUT','DELETE'],
+  credentials : true
+}))
 app.use(clerkMiddleware());
 
 //Db

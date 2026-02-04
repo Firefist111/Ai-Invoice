@@ -17,7 +17,11 @@ const businessProfileSchema = mongoose.Schema(
       type: String,
       default: "",
     },
-    PhoneNumber: {
+    phone: {
+      type: String,
+      default: "",
+    },
+    address: {
       type: String,
       default: "",
     },
@@ -41,7 +45,7 @@ const businessProfileSchema = mongoose.Schema(
     signatureOwnerTitle: {
       type: String,
     },
-    defaulttaxPercent: {
+    defaultTaxPercent: {
       type: Number,
       default: 18,
     },
