@@ -3,11 +3,19 @@ import { appShellStyles } from "../assets/dummyStyles";
 import logo from "../assets/logo.png";
 import { Link, Links, NavLink, Outlet, useNavigate } from "react-router-dom";
 import { useClerk, useUser } from "@clerk/clerk-react";
+import { useTheme } from "../context/ThemeContext";
 
 const AppShell = () => {
   const navigate = useNavigate();
   const { signOut } = useClerk();
   const { user } = useUser();
+  const { dark, toggleTheme } = useTheme();
+  const [spinKey, setSpinKey] = React.useState(0);
+
+  const handleThemeToggle = () => {
+    setSpinKey((k) => k + 1);
+    toggleTheme();
+  };
 
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const [collapsed, setCollapsed] = React.useState(() => {
@@ -206,10 +214,10 @@ const AppShell = () => {
   };
 
   return (
-    <div className={appShellStyles.root}>
+    <div className={`${appShellStyles.root} dark:bg-gray-950`}>
       <div className={appShellStyles.layout}>
         <aside
-          className={`${appShellStyles.sidebar} ${collapsed ? appShellStyles.collapsed : appShellStyles.sidebarExpanded}`}
+          className={`${appShellStyles.sidebar} ${collapsed ? appShellStyles.collapsed : appShellStyles.sidebarExpanded} dark:bg-gray-900 dark:border-gray-700/60`}
         >
           <div className={appShellStyles.sidebarGradient}> </div>
           <div className={appShellStyles.sidebarContainer}>
@@ -397,9 +405,9 @@ const AppShell = () => {
 
         {/* MAin Content */}
 
-        <div className="flex-1 min-w-0 bg-gray-50">
+        <div className="flex-1 min-w-0 bg-gray-50 dark:bg-gray-950">
           <header
-            className={`${appShellStyles.header} ${scrolled
+            className={`${appShellStyles.header} dark:bg-gray-900/95 dark:border-gray-700/60 ${scrolled
               ? appShellStyles.headerScrolled
               : appShellStyles.headerNotScrolled
               }`}
@@ -437,6 +445,24 @@ const AppShell = () => {
             </div>
 
             <div className={appShellStyles.headerActions}>
+              {/* Dark mode toggle */}
+              <button
+                key={spinKey}
+                onClick={handleThemeToggle}
+                className="p-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 transition-all duration-200 hover:shadow-md animate-spin-once"
+                title={dark ? "Switch to Light Mode" : "Switch to Dark Mode"}
+              >
+                {dark ? (
+                  <svg className="w-5 h-5 text-amber-400" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm0 15a5 5 0 100-10 5 5 0 000 10zm7.071-12.071a1 1 0 010 1.414l-.707.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM21 11h1a1 1 0 110 2h-1a1 1 0 110-2zM4.929 17.071a1 1 0 011.414 1.414l-.707.707a1 1 0 11-1.414-1.414l.707-.707zm12.728 1.414a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414l-.707.707zM4 11H3a1 1 0 100 2h1a1 1 0 100-2zm1.636-6.364a1 1 0 011.414 0l.707.707A1 1 0 116.343 6.757l-.707-.707a1 1 0 010-1.414zM12 20a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1z" />
+                  </svg>
+                ) : (
+                  <svg className="w-5 h-5 text-indigo-500" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
+                  </svg>
+                )}
+              </button>
+
               <button
                 onClick={() => navigate("/app/create-invoice")}
                 className={appShellStyles.ctaButton}
@@ -447,20 +473,18 @@ const AppShell = () => {
 
               <div className={appShellStyles.userSectionDesktop}>
                 <div className={appShellStyles.userInfo}>
-                  <div className={appShellStyles.userName}>{displayName}</div>
-                  <div className={appShellStyles.email}>{user?.email}</div>
+                  <div className={`${appShellStyles.userName} dark:text-gray-100`}>{displayName}</div>
+                  <div className={`${appShellStyles.email} dark:text-gray-400`}>{user?.email}</div>
                 </div>
 
                 <div className={appShellStyles.userAvatarContainer}>
                   <div className={appShellStyles.userAvatar}>{initials()}</div>
                 </div>
-
-                {/* <div className={appShellStyles.userStatus}></div> */}
               </div>
             </div>
           </header>
 
-          <main className={appShellStyles.main}>
+          <main className={`${appShellStyles.main} dark:bg-gray-950`}>
             <div className={appShellStyles.mainContainer}>
               <Outlet />
             </div>

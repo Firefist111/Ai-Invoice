@@ -1,18 +1,9 @@
-import { useAuth } from '@clerk/clerk-react';
+import { RedirectToSignIn } from '@clerk/clerk-react';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const Hero = () => {
   const navigate = useNavigate();
-  const { isSignedIn } = useAuth();
-
-  const handleCTAClick = () => {
-    if (isSignedIn) {
-      navigate('/app/dashboard');
-    } else {
-      navigate('/signUp');
-    }
-  };
 
   return (
     <section id="hero" className="relative min-h-screen bg-gradient-to-br from-gray-50 via-blue-50/30 to-white overflow-hidden">
@@ -49,9 +40,10 @@ const Hero = () => {
               </p>
             </div>
 
+            {/* CTA Buttons */}
             <div className="flex flex-wrap gap-4">
               <button
-                onClick={handleCTAClick}
+                onClick={() => navigate('/app/create-invoice')}
                 className="group inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200"
               >
                 Start Creating Free
