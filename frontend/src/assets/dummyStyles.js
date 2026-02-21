@@ -17,18 +17,18 @@ export const aiInvoiceModalStyles = {
 // src/assets/dummyStyles.js
 export const businessProfileStyles = {
   // Layout
-  pageContainer: "space-y-8 font-[pacifico]",
+  pageContainer: "space-y-8 font-[pacifico] animate-fade-slide-in",
 
   // Header
   headerContainer: "text-center lg:text-left",
-  headerTitle: "text-3xl lg:text-4xl font-bold text-gray-900 tracking-tight",
-  headerSubtitle: "mt-2 text-lg text-gray-600 max-w-3xl",
+  headerTitle: "text-3xl lg:text-4xl font-bold text-gray-900 dark:text-gray-100 tracking-tight",
+  headerSubtitle: "mt-2 text-lg text-gray-600 dark:text-gray-400 max-w-3xl",
 
   // Cards/Sections
-  cardContainer: "bg-white/80 backdrop-blur-xl rounded-2xl p-8 border border-gray-200/60 shadow-sm",
+  cardContainer: "bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl rounded-2xl p-8 border border-gray-200/60 dark:border-gray-700/60 shadow-sm",
   cardHeaderContainer: "flex items-center gap-3 mb-6",
   cardIconContainer: "p-2 rounded-lg",
-  cardTitle: "text-xl whitespace-nowrap font-semibold text-gray-900",
+  cardTitle: "text-xl whitespace-nowrap font-semibold text-gray-900 dark:text-gray-100",
 
   // Grid
   gridCols1: "grid grid-cols-1 gap-6",
@@ -37,41 +37,39 @@ export const businessProfileStyles = {
   gridColSpan2: "md:col-span-2",
 
   // Form Elements
-  label: "block text-sm font-medium text-gray-700 mb-2",
-  input: "w-full rounded-xl border border-gray-300 px-4 py-3 bg-white/50 backdrop-blur-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200",
-  textarea: "w-full rounded-xl border border-gray-300 px-4 py-3 bg-white/50 backdrop-blur-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200",
+  label: "block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2",
+  input: "w-full rounded-xl border border-gray-300 dark:border-gray-600 px-4 py-3 bg-white/50 dark:bg-gray-700/50 text-gray-900 dark:text-gray-100 backdrop-blur-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200",
+  textarea: "w-full rounded-xl border border-gray-300 dark:border-gray-600 px-4 py-3 bg-white/50 dark:bg-gray-700/50 text-gray-900 dark:text-gray-100 backdrop-blur-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200",
 
   // Upload Areas
-  uploadArea: "border-4 border-dashed border-gray-300 rounded-2xl p-6 transition-all duration-300 hover:border-gray-400 group",
-  uploadIconContainer: "w-16 h-16 mx-auto rounded-full bg-gray-100 flex items-center justify-center text-gray-400",
-  uploadSmallIconContainer: "w-12 h-12 mx-auto rounded-full bg-gray-100 flex items-center justify-center text-gray-400",
-  uploadTextTitle: "text-sm font-medium text-gray-900",
-  uploadTextSubtitle: "text-xs text-gray-500 mt-1",
+  uploadArea: "border-4 border-dashed border-gray-300 dark:border-gray-600 rounded-2xl p-6 transition-all duration-300 hover:border-gray-400 group",
+  uploadIconContainer: "w-16 h-16 mx-auto rounded-full bg-gray-100 dark:bg-gray-700 flex items-center justify-center text-gray-400",
+  uploadSmallIconContainer: "w-12 h-12 mx-auto rounded-full bg-gray-100 dark:bg-gray-700 flex items-center justify-center text-gray-400",
+  uploadTextTitle: "text-sm font-medium text-gray-900 dark:text-gray-100",
+  uploadTextSubtitle: "text-xs text-gray-500 dark:text-gray-400 mt-1",
 
   // Image Previews
   imagePreviewContainer: "text-center space-y-4",
-  logoPreview: "w-40 h-32 mx-auto  rounded-xl overflow-hidden flex items-center justify-center bg-white",
-  stampPreview: "w-32 h-24 mx-auto  rounded-xl overflow-hidden flex items-center justify-center bg-white",
-  signaturePreview: "w-32 h-20 mx-auto rounded-xl overflow-hidden flex items-center justify-center bg-white",
+  logoPreview: "w-40 h-32 mx-auto  rounded-xl overflow-hidden flex items-center justify-center bg-white dark:bg-gray-700",
+  stampPreview: "w-32 h-24 mx-auto  rounded-xl overflow-hidden flex items-center justify-center bg-white dark:bg-gray-700",
+  signaturePreview: "w-32 h-20 mx-auto rounded-xl overflow-hidden flex items-center justify-center bg-white dark:bg-gray-700",
 
   // Buttons
   buttonGroup: "flex flex-wrap gap-2 justify-center sm:gap-3 md:gap-4",
-  changeButton: "inline-flex items-center gap-2 px-3 py-2 sm:px-4 sm:py-2 md:px-5 md:py-2.5 rounded-xl bg-blue-50 text-blue-700 hover:bg-blue-100 transition-all duration-200 cursor-pointer font-medium text-sm sm:text-base",
-
-  removeButton: "inline-flex items-center gap-2 px-3 py-2 sm:px-4 sm:py-2 md:px-5 md:py-2.5 rounded-xl bg-rose-50 text-rose-700 hover:bg-rose-100 transition-all duration-200 font-medium text-sm sm:text-base",
-
+  changeButton: "inline-flex items-center gap-2 px-3 py-2 sm:px-4 sm:py-2 md:px-5 md:py-2.5 rounded-xl bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 hover:bg-blue-100 dark:hover:bg-blue-900/50 transition-all duration-200 cursor-pointer font-medium text-sm sm:text-base",
+  removeButton: "inline-flex items-center gap-2 px-3 py-2 sm:px-4 sm:py-2 md:px-5 md:py-2.5 rounded-xl bg-rose-50 dark:bg-rose-900/20 text-rose-700 dark:text-rose-400 hover:bg-rose-100 dark:hover:bg-rose-900/40 transition-all duration-200 font-medium text-sm sm:text-base",
 
   // Tax Section
-  taxContainer: "bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-6 border border-blue-100",
-  taxInput: "w-32 rounded-xl border border-gray-300 px-4 py-3 bg-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 font-medium text-center",
-  taxHelpText: "text-xs text-gray-500 mt-3",
+  taxContainer: "bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-2xl p-6 border border-blue-100 dark:border-blue-800/40",
+  taxInput: "w-32 rounded-xl border border-gray-300 dark:border-gray-600 px-4 py-3 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 font-medium text-center",
+  taxHelpText: "text-xs text-gray-500 dark:text-gray-400 mt-3",
 
   // Action Buttons
-  actionContainer: "bg-white/80 backdrop-blur-xl rounded-2xl p-6 border border-gray-200/60 shadow-sm",
+  actionContainer: "bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl rounded-2xl p-6 border border-gray-200/60 dark:border-gray-700/60 shadow-sm",
   actionInnerContainer: "flex flex-col sm:flex-row items-center justify-between gap-4",
   actionButtonGroup: "flex flex-wrap items-center gap-2 sm:gap-3 justify-center sm:justify-start",
   saveButton: "inline-flex items-center gap-2 px-4 py-2 sm:px-6 sm:py-3 md:px-7 md:py-3.5 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold text-sm sm:text-base hover:from-blue-700 hover:to-indigo-700 transform hover:scale-105 transition-all duration-200 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed",
-  resetButton: "inline-flex items-center gap-2 px-4 py-2 sm:px-6 sm:py-3 md:px-7 md:py-3.5 rounded-xl border border-gray-300 bg-white text-gray-700 hover:bg-gray-50 hover:border-gray-400 transition-all duration-200 font-medium text-sm sm:text-base",
+  resetButton: "inline-flex items-center gap-2 px-4 py-2 sm:px-6 sm:py-3 md:px-7 md:py-3.5 rounded-xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:border-gray-400 transition-all duration-200 font-medium text-sm sm:text-base",
 
   // Animation
   hoverScale: "group-hover:scale-105 transition-transform duration-300"
@@ -118,36 +116,26 @@ export const aiReminderModalStyles = {
 
 export const createInvoiceStyles = {
   // Layout
-  pageContainer: "space-y-8 font-[pacifico]",
+  pageContainer: "space-y-8 font-[pacifico] animate-fade-slide-in",
   mainGrid: "grid lg:grid-cols-3 gap-8",
   leftColumn: "lg:col-span-2 space-y-8",
   rightColumn: "space-y-8",
 
   // Header
   headerContainer: "flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4",
-  headerTitle: "text-3xl lg:text-4xl font-bold text-gray-900 tracking-tight",
-  headerSubtitle: "mt-2 text-lg text-gray-600 max-w-3xl",
+  headerTitle: "text-3xl lg:text-4xl font-bold text-gray-900 dark:text-gray-100 tracking-tight",
+  headerSubtitle: "mt-2 text-lg text-gray-600 dark:text-gray-400 max-w-3xl",
   headerButtonContainer: "flex items-center gap-3",
 
   // Cards/Sections
-  cardContainer: "bg-white/80 backdrop-blur-xl rounded-2xl p-4 sm:p-6 md:p-8 border border-gray-200/60 shadow-sm w-full",
-
-  cardSmallContainer: "bg-white/80 backdrop-blur-xl rounded-2xl p-3 sm:p-4 md:p-6 border border-gray-200/60 shadow-sm w-full",
-
+  cardContainer: "bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl rounded-2xl p-4 sm:p-6 md:p-8 border border-gray-200/60 dark:border-gray-700/60 shadow-sm w-full",
+  cardSmallContainer: "bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl rounded-2xl p-3 sm:p-4 md:p-6 border border-gray-200/60 dark:border-gray-700/60 shadow-sm w-full",
   cardHeaderContainer: "flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-3 mb-4 sm:mb-6",
-
-
   cardHeaderWithButton: "flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 mb-4 sm:mb-6",
-
   cardHeaderLeft: "flex items-center gap-2 sm:gap-3",
-
   cardIconContainer: "p-2 rounded-lg w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 flex items-center justify-center",
-
-  cardTitle: "text-xl sm:text-2xl font-semibold text-gray-900",
-
-  cardSubtitle: "text-lg sm:text-xl font-semibold text-gray-900 mb-3 sm:mb-4",
-
-
+  cardTitle: "text-xl sm:text-2xl font-semibold text-gray-900 dark:text-gray-100",
+  cardSubtitle: "text-lg sm:text-xl font-semibold text-gray-900 dark:text-gray-100 mb-3 sm:mb-4",
 
   // Grid
   gridCols1: "grid grid-cols-1  gap-6",
@@ -157,13 +145,13 @@ export const createInvoiceStyles = {
   gridColSpan2: "md:col-span-2 ",
 
   // Form Elements
-  label: "block text-sm font-medium text-gray-700 mb-2",
-  labelWithMargin: "block text-sm font-medium text-gray-700 mb-3",
-  input: "w-full rounded-xl border border-gray-300 px-4 py-3 bg-white/50 backdrop-blur-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200",
-  inputMedium: "w-full rounded-xl border border-gray-300 px-4 py-3 bg-white/50 backdrop-blur-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 font-medium",
-  inputCenter: "w-full rounded-xl border border-gray-300 px-4 py-3 bg-white/50 backdrop-blur-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 text-center font-medium",
-  textarea: "w-full rounded-xl border border-gray-300 px-4 py-3 bg-white/50 backdrop-blur-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200",
-  inputSmall: "w-full rounded-xl border text-gray-500 border-gray-300 px-4 py-3 bg-white/50 backdrop-blur-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 text-sm",
+  label: "block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2",
+  labelWithMargin: "block text-sm font-medium text-gray-700 dark:text-gray-300 mb-3",
+  input: "w-full rounded-xl border border-gray-300 dark:border-gray-600 px-4 py-3 bg-white/50 dark:bg-gray-700/50 text-gray-900 dark:text-gray-100 backdrop-blur-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200",
+  inputMedium: "w-full rounded-xl border border-gray-300 dark:border-gray-600 px-4 py-3 bg-white/50 dark:bg-gray-700/50 text-gray-900 dark:text-gray-100 backdrop-blur-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 font-medium",
+  inputCenter: "w-full rounded-xl border border-gray-300 dark:border-gray-600 px-4 py-3 bg-white/50 dark:bg-gray-700/50 text-gray-900 dark:text-gray-100 backdrop-blur-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 text-center font-medium",
+  textarea: "w-full rounded-xl border border-gray-300 dark:border-gray-600 px-4 py-3 bg-white/50 dark:bg-gray-700/50 text-gray-900 dark:text-gray-100 backdrop-blur-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200",
+  inputSmall: "w-full rounded-xl border text-gray-500 dark:text-gray-400 border-gray-300 dark:border-gray-600 px-4 py-3 bg-white/50 dark:bg-gray-700/50 backdrop-blur-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 text-sm",
 
   // Buttons
   previewButton: "inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-gray-300 bg-white text-gray-700 hover:bg-gray-50 hover:border-gray-400 transition-all duration-200 font-medium shadow-sm",
@@ -281,14 +269,14 @@ export const appShellStyles = {
   layout: "lg:flex min-h-screen",
 
   // Desktop Sidebar
-  sidebar: "hidden lg:block bg-white backdrop-blur-xl border-r border-gray-200 shadow-xl transition-all duration-500 ease-in-out relative",
+  sidebar: "hidden lg:block bg-white dark:bg-gray-900 backdrop-blur-xl border-r border-gray-200 dark:border-gray-700/60 shadow-xl transition-all duration-500 ease-in-out relative",
   sidebarCollapsed: "w-20",
   sidebarExpanded: "w-80",
-  sidebarGradient: "absolute inset-0 bg-gradient-to-br from-blue-50/30 via-indigo-50/20 to-transparent pointer-events-none",
+  sidebarGradient: "absolute inset-0 bg-gradient-to-br from-blue-50/30 via-indigo-50/20 to-transparent dark:from-blue-900/10 dark:via-indigo-900/5 pointer-events-none",
   sidebarContainer: "px-6 py-6 h-full flex flex-col justify-between relative z-10",
 
   // Logo Area
-  sidebarLogo: "mb-10 flex items-center justify-between pb-6 border-b border-gray-100",
+  sidebarLogo: "mb-10 flex items-center justify-between pb-6 border-b border-gray-100 dark:border-gray-700/60",
   logoContainer: "mb-10 flex items-center",
   logoContainerCollapsed: "justify-center",
   logoLink: "inline-flex items-center group transition-all duration-300 hover:scale-105",
@@ -296,73 +284,73 @@ export const appShellStyles = {
   logoTextContainer: "ml-3",
   logoText: "font-bold text-2xl bg-gradient-to-r from-blue-600 via-blue-700 to-indigo-600 bg-clip-text text-transparent",
   logoUnderline: "h-0.5 w-0 group-hover:w-full bg-gradient-to-r from-blue-500 to-indigo-500 transition-all duration-500 mt-1 rounded-full",
-  collapseButton: "p-2 ml-6 rounded-lg border border-gray-200 bg-gray-50 hover:bg-blue-50 hover:border-blue-300 hover:shadow-md transition-all duration-300",
+  collapseButton: "p-2 ml-6 rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 hover:bg-blue-50 hover:border-blue-300 hover:shadow-md transition-all duration-300",
 
   // Navigation
   nav: "space-y-1.5 mt-6",
   sidebarLink: "group relative flex items-center gap-3 px-4 py-3.5 rounded-xl text-sm font-medium transition-all duration-200 ease-out",
   sidebarLinkCollapsed: "justify-center",
   sidebarLinkActive: "bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-lg shadow-blue-500/30",
-  sidebarLinkInactive: "text-gray-600 hover:text-blue-600 hover:bg-blue-50/50 border border-transparent",
+  sidebarLinkInactive: "text-gray-600 dark:text-gray-400 hover:text-blue-600 hover:bg-blue-50/50 dark:hover:bg-blue-900/20 border border-transparent",
   sidebarIcon: "transition-all duration-200",
   sidebarIconActive: "text-white scale-105",
-  sidebarIconInactive: "text-gray-400 group-hover:text-blue-600 group-hover:scale-105",
+  sidebarIconInactive: "text-gray-400 dark:text-gray-500 group-hover:text-blue-600 group-hover:scale-105",
   sidebarText: "flex-1 transition-all duration-200 font-medium",
   sidebarActiveIndicator: "w-1 h-8 rounded-r-full bg-white absolute left-0 top-1/2 -translate-y-1/2",
 
   // User Area
-  userSection: "mt-auto pt-6 border-t border-gray-100",
-  userDivider: "border-t border-gray-100 pt-6",
+  userSection: "mt-auto pt-6 border-t border-gray-100 dark:border-gray-700/60",
+  userDivider: "border-t border-gray-100 dark:border-gray-700/60 pt-6",
   userDividerCollapsed: "px-1",
   userDividerExpanded: "px-2",
-  logoutButton: "w-full flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium text-red-600 hover:bg-red-50 hover:text-red-700 hover:shadow-md border border-transparent hover:border-red-100 transition-all duration-200 group",
+  logoutButton: "w-full flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-900/20 hover:text-red-700 hover:shadow-md border border-transparent hover:border-red-100 transition-all duration-200 group",
   logoutIcon: "w-5 h-5 group-hover:scale-110 transition-transform",
   collapseSection: "mt-4 flex justify-center",
-  collapseButtonInner: "flex items-center gap-2 px-3 py-2 rounded-lg border border-gray-200 hover:border-gray-300 hover:bg-white transition-all duration-300 text-xs text-gray-600 hover:text-gray-800",
+  collapseButtonInner: "flex items-center gap-2 px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-gray-300 hover:bg-white dark:hover:bg-gray-800 transition-all duration-300 text-xs text-gray-600 dark:text-gray-400 hover:text-gray-800",
   collapseButtonCollapsed: "justify-center w-10",
 
   // Mobile Sidebar
   mobileOverlay: "lg:hidden fixed inset-0 z-50",
   mobileBackdrop: "absolute inset-0 bg-black/40 backdrop-blur-sm transition-opacity duration-300",
-  mobileSidebar: "absolute inset-y-0 left-0 w-80 bg-white/98 backdrop-blur-xl border-r border-gray-200 shadow-2xl p-6 overflow-auto transform transition-transform duration-300",
-  mobileHeader: "mb-8 flex items-center justify-between pb-4 border-b border-gray-200",
+  mobileSidebar: "absolute inset-y-0 left-0 w-80 bg-white/98 dark:bg-gray-900 backdrop-blur-xl border-r border-gray-200 dark:border-gray-700/60 shadow-2xl p-6 overflow-auto transform transition-transform duration-300",
+  mobileHeader: "mb-8 flex items-center justify-between pb-4 border-b border-gray-200 dark:border-gray-700/60",
   mobileLogoLink: "inline-flex items-center",
   mobileLogoImage: "h-10 w-10 object-contain drop-shadow-md",
   mobileLogoText: "font-bold text-xl ml-3 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent",
-  mobileCloseButton: "p-2 rounded-lg border border-gray-300 hover:border-red-400 hover:bg-red-50 transition-all duration-200",
-  mobileCloseIcon: "w-5 h-5 text-gray-600 group-hover:text-red-600 transition-colors",
+  mobileCloseButton: "p-2 rounded-lg border border-gray-300 dark:border-gray-700 hover:border-red-400 hover:bg-red-50 dark:hover:bg-red-900/20 transition-all duration-200",
+  mobileCloseIcon: "w-5 h-5 text-gray-600 dark:text-gray-400 group-hover:text-red-600 transition-colors",
   mobileNav: "space-y-2",
   mobileNavLink: "flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition-all duration-200 border border-transparent",
-  mobileNavLinkActive: "bg-gradient-to-r from-blue-50 to-indigo-50 text-blue-700 border-blue-200 shadow-sm",
-  mobileNavLinkInactive: "text-gray-700 hover:text-gray-900 hover:bg-gray-50 hover:border-gray-200",
-  mobileLogoutSection: "mt-8 border-t border-gray-200 pt-6",
-  mobileLogoutButton: "w-full flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium text-red-600 hover:bg-red-50 border border-transparent hover:border-red-200 transition-all duration-200",
+  mobileNavLinkActive: "bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/30 dark:to-indigo-900/30 text-blue-700 dark:text-blue-400 border-blue-200 dark:border-blue-700 shadow-sm",
+  mobileNavLinkInactive: "text-gray-700 dark:text-gray-300 hover:text-gray-900 hover:bg-gray-50 dark:hover:bg-gray-800 hover:border-gray-200",
+  mobileLogoutSection: "mt-8 border-t border-gray-200 dark:border-gray-700/60 pt-6",
+  mobileLogoutButton: "w-full flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-900/20 border border-transparent hover:border-red-200 transition-all duration-200",
 
   // Header
   header: "flex flex-col sm:flex-row sm:items-center justify-between px-4 sm:px-6 lg:px-8 bg-white/95 backdrop-blur-xl border-b border-gray-200 sticky top-0 z-40 transition-all duration-300 min-h-20",
-  headerScrolled: "shadow-md border-b border-gray-300",
+  headerScrolled: "shadow-md border-b border-gray-300 dark:border-gray-700",
   headerNotScrolled: "shadow-sm",
   headerTopSection: "flex items-center justify-between sm:justify-start w-full sm:w-auto py-3 sm:py-0",
   headerContent: "flex items-center gap-3 sm:gap-6",
-  mobileMenuButton: "lg:hidden inline-flex items-center justify-center p-2.5 sm:p-3 rounded-xl border border-gray-300 bg-white hover:bg-gray-50 hover:border-blue-400 hover:shadow-md transition-all duration-200",
-  mobileMenuIcon: "w-5 h-5 text-gray-700",
-  desktopCollapseButton: "hidden lg:flex items-center justify-center p-2.5 rounded-xl border border-gray-300 bg-white hover:bg-gray-50 hover:border-blue-400 hover:shadow-md transition-all duration-200",
+  mobileMenuButton: "lg:hidden inline-flex items-center justify-center p-2.5 sm:p-3 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 hover:border-blue-400 hover:shadow-md transition-all duration-200",
+  mobileMenuIcon: "w-5 h-5 text-gray-700 dark:text-gray-300",
+  desktopCollapseButton: "hidden lg:flex items-center justify-center p-2.5 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 hover:bg-gray-50 hover:border-blue-400 hover:shadow-md transition-all duration-200",
   welcomeContainer: "flex flex-col",
-  welcomeTitle: "text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 tracking-tight",
+  welcomeTitle: "text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 dark:text-gray-100 tracking-tight",
   welcomeName: "bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent",
-  welcomeSubtitle: "text-xs sm:text-sm text-gray-600 mt-0.5 sm:mt-1",
+  welcomeSubtitle: "text-xs sm:text-sm text-gray-600 dark:text-gray-400 mt-0.5 sm:mt-1",
   mobileUserAvatar: "lg:hidden flex items-center gap-2",
   mobileAvatar: "w-8 h-8 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-white text-xs font-semibold shadow-md",
 
   // Header Actions
-  headerActions: "flex items-center justify-between sm:justify-end gap-3 sm:gap-4 pb-3 sm:pb-0 border-t border-gray-100 sm:border-t-0 pt-3 sm:pt-0",
+  headerActions: "flex items-center justify-between sm:justify-end gap-3 sm:gap-4 pb-3 sm:pb-0 border-t border-gray-100 dark:border-gray-700/60 sm:border-t-0 pt-3 sm:pt-0",
   ctaButton: "group inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200 hover:from-blue-700 hover:to-indigo-700 text-sm sm:text-base flex-1 sm:flex-none justify-center",
   ctaIcon: "w-4 h-4 text-white",
   ctaArrow: "w-0 group-hover:w-2 group-hover:ml-1 transition-all duration-300 overflow-hidden hidden sm:block",
-  userSectionDesktop: "lg:flex md:flex items-center gap-4 pl-4 border-l border-gray-200",
+  userSectionDesktop: "lg:flex md:flex items-center gap-4 pl-4 border-l border-gray-200 dark:border-gray-700",
   userInfo: "hidden sm:block text-right",
-  userName: "text-sm font-semibold text-gray-900",
-  userEmail: "text-xs text-gray-500",
+  userName: "text-sm font-semibold text-gray-900 dark:text-gray-100",
+  userEmail: "text-xs text-gray-500 dark:text-gray-400",
   userAvatarContainer: "relative",
   userAvatar: "w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-white font-semibold shadow-lg transform hover:scale-105 transition-all duration-200 cursor-pointer",
   userAvatarBorder: "absolute inset-0 rounded-2xl border-2 border-white/20 group-hover:border-white/40 transition-all duration-300",
@@ -377,12 +365,12 @@ export const appShellStyles = {
 
 export const dashboardStyles = {
   // Layout
-  pageContainer: "space-y-8 font-[pacifico]",
+  pageContainer: "space-y-8 font-[pacifico] animate-fade-slide-in",
 
   // Header
   headerContainer: "text-center lg:text-left",
-  headerTitle: "text-3xl lg:text-4xl font-bold text-gray-900 tracking-tight",
-  headerSubtitle: "mt-2 text-lg text-gray-600 max-w-2xl mx-auto lg:mx-0",
+  headerTitle: "text-3xl lg:text-4xl font-bold text-gray-900 dark:text-gray-100 tracking-tight",
+  headerSubtitle: "mt-2 text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto lg:mx-0",
 
   // KPI Grid
   kpiGrid: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8",
@@ -393,8 +381,8 @@ export const dashboardStyles = {
   contentColumn: "xl:col-span-3",
 
   // Cards
-  cardContainer: "bg-white/80 backdrop-blur-xl rounded-2xl border border-gray-200/60 shadow-sm",
-  cardContainerOverflow: "bg-white/80 backdrop-blur-xl rounded-2xl border border-gray-200/60 shadow-sm overflow-hidden",
+  cardContainer: "bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl rounded-2xl border border-gray-200/60 dark:border-gray-700/60 shadow-sm",
+  cardContainerOverflow: "bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl rounded-2xl border border-gray-200/60 dark:border-gray-700/60 shadow-sm overflow-hidden",
 
   // Quick Stats Card
   quickStatsCard: "bg-gradient-to-br from-blue-600 to-indigo-700 rounded-2xl p-6 text-white",
@@ -410,50 +398,50 @@ export const dashboardStyles = {
   quickActionText: "font-medium",
 
   // Quick Action Color Variants
-  quickActionBlue: "bg-blue-50 text-blue-700 hover:bg-blue-100",
-  quickActionGray: "bg-gray-50 text-gray-700 hover:bg-gray-100",
+  quickActionBlue: "bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 hover:bg-blue-100 dark:hover:bg-blue-900/50",
+  quickActionGray: "bg-gray-50 dark:bg-gray-700/50 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700",
 
   // Table Styles
-  tableHeader: "px-6 py-5 border-b border-gray-200/60",
+  tableHeader: "px-6 py-5 border-b border-gray-200/60 dark:border-gray-700/60",
   tableHeaderContent: "flex flex-col sm:flex-row sm:items-center sm:justify-between",
-  tableTitle: "text-lg font-semibold text-gray-900",
-  tableSubtitle: "text-sm text-gray-600 mt-1",
+  tableTitle: "text-lg font-semibold text-gray-900 dark:text-gray-100",
+  tableSubtitle: "text-sm text-gray-600 dark:text-gray-400 mt-1",
   tableActionButton: "mt-3 sm:mt-0 inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-blue-600 hover:text-blue-700 transition-colors duration-200",
 
   // Table
   tableContainer: "overflow-x-auto",
   table: "w-full",
-  tableHead: "bg-gray-50/80 border-b border-gray-200/60",
-  tableHeaderCell: "px-6 py-4 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider",
-  tableHeaderCellRight: "px-6 py-4 text-right text-xs font-semibold text-gray-500 uppercase tracking-wider",
-  tableBody: "divide-y divide-gray-200/60",
-  tableRow: "hover:bg-gray-50/50 transition-colors duration-150 group cursor-pointer",
+  tableHead: "bg-gray-50/80 dark:bg-gray-700/50 border-b border-gray-200/60 dark:border-gray-700/60",
+  tableHeaderCell: "px-6 py-4 text-left text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider",
+  tableHeaderCellRight: "px-6 py-4 text-right text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider",
+  tableBody: "divide-y divide-gray-200/60 dark:divide-gray-700/60",
+  tableRow: "hover:bg-gray-50/50 dark:hover:bg-gray-700/30 transition-colors duration-150 group cursor-pointer",
   tableCell: "px-6 py-4",
 
   // Client Avatar
-  clientAvatar: "w-10 h-10 rounded-lg bg-gradient-to-br from-blue-100 to-indigo-100 flex items-center justify-center text-blue-600 font-medium group-hover:scale-110 transition-transform duration-200",
-  clientInfo: "font-medium text-gray-900 group-hover:text-blue-600 transition-colors",
-  clientSubInfo: "text-sm text-gray-500",
+  clientAvatar: "w-10 h-10 rounded-lg bg-gradient-to-br from-blue-100 to-indigo-100 dark:from-blue-900/40 dark:to-indigo-900/40 flex items-center justify-center text-blue-600 dark:text-blue-400 font-medium group-hover:scale-110 transition-transform duration-200",
+  clientInfo: "font-medium text-gray-900 dark:text-gray-100 group-hover:text-blue-600 transition-colors",
+  clientSubInfo: "text-sm text-gray-500 dark:text-gray-400",
 
   // Amount Cell
-  amountCell: "font-medium text-gray-900",
+  amountCell: "font-medium text-gray-900 dark:text-gray-100",
 
   // Date Cell
-  dateCell: "text-sm text-gray-900",
+  dateCell: "text-sm text-gray-900 dark:text-gray-300",
 
   // Action Button
-  actionButton: "inline-flex items-center gap-2 px-3 py-2 text-sm font-medium text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all duration-200 group/btn",
+  actionButton: "inline-flex items-center gap-2 px-3 py-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-blue-600 hover:bg-blue-50 dark:hover:bg-blue-900/20 rounded-lg transition-all duration-200 group/btn",
 
   // Empty State
   emptyState: "px-6 py-12 text-center",
-  emptyStateIcon: "w-12 h-12 mx-auto text-gray-300",
-  emptyStateText: "text-gray-500 space-y-2",
+  emptyStateIcon: "w-12 h-12 mx-auto text-gray-300 dark:text-gray-600",
+  emptyStateText: "text-gray-500 dark:text-gray-400 space-y-2",
   emptyStateMessage: "font-medium",
   emptyStateAction: "text-blue-600 hover:text-blue-700 font-medium",
 
   // Color variants for quick action icons
-  quickActionIconBlue: "bg-blue-100",
-  quickActionIconGray: "bg-gray-100"
+  quickActionIconBlue: "bg-blue-100 dark:bg-blue-900/40",
+  quickActionIconGray: "bg-gray-100 dark:bg-gray-700"
 };
 
 // src/assets/dummyStyles.js (add these to the existing export)
@@ -461,117 +449,117 @@ export const dashboardStyles = {
 
 export const invoicesStyles = {
   // Layout
-  pageContainer: "space-y-8 font-[pacifico]",
+  pageContainer: "space-y-8 font-[pacifico] animate-fade-slide-in",
 
   // Header
   headerContainer: "flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4",
-  headerTitle: "text-3xl lg:text-4xl font-bold text-gray-900 tracking-tight",
-  headerSubtitle: "mt-2 text-lg text-gray-600 max-w-3xl",
+  headerTitle: "text-3xl lg:text-4xl font-bold text-gray-900 dark:text-gray-100 tracking-tight",
+  headerSubtitle: "mt-2 text-lg text-gray-600 dark:text-gray-400 max-w-3xl",
   headerActions: "flex items-center gap-3",
-  aiButton: "inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-gray-300 bg-white text-gray-700 hover:bg-gray-50 hover:border-gray-400 transition-all duration-200 font-medium shadow-sm group",
+  aiButton: "inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:border-gray-400 transition-all duration-200 font-medium shadow-sm group",
   createButton: "inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold hover:from-blue-700 hover:to-indigo-700 transform hover:scale-105 transition-all duration-200 shadow-lg",
 
   // Stats Overview
   statsGrid: "grid grid-cols-2 md:grid-cols-4 gap-6",
-  statCard: "bg-white/80 backdrop-blur-xl rounded-2xl p-6 border border-gray-200/60 shadow-sm",
-  statValue: "text-2xl font-bold text-gray-900",
-  statLabel: "text-sm text-gray-600 mt-1",
+  statCard: "bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl rounded-2xl p-6 border border-gray-200/60 dark:border-gray-700/60 shadow-sm",
+  statValue: "text-2xl font-bold text-gray-900 dark:text-gray-100",
+  statLabel: "text-sm text-gray-600 dark:text-gray-400 mt-1",
 
   // Filters Section
-  filtersCard: "bg-white/80 backdrop-blur-xl rounded-2xl p-6 border border-gray-200/60 shadow-sm",
+  filtersCard: "bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl rounded-2xl p-6 border border-gray-200/60 dark:border-gray-700/60 shadow-sm",
   filtersHeader: "flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 mb-6",
   filtersHeaderLeft: "flex items-center gap-3",
-  filtersIconContainer: "p-2 rounded-lg bg-blue-100 text-blue-600",
-  filtersTitle: "text-xl font-semibold text-gray-900",
-  filtersCount: "text-sm text-gray-600",
-  filtersCountNumber: "font-bold text-gray-900",
+  filtersIconContainer: "p-2 rounded-lg bg-blue-100 dark:bg-blue-900/40 text-blue-600 dark:text-blue-400",
+  filtersTitle: "text-xl font-semibold text-gray-900 dark:text-gray-100",
+  filtersCount: "text-sm text-gray-600 dark:text-gray-400",
+  filtersCountNumber: "font-bold text-gray-900 dark:text-gray-100",
 
   // Filters Grid
   filtersGrid: "grid grid-cols-1 lg:grid-cols-5 gap-4",
   searchContainer: "lg:col-span-2",
-  filterLabel: "block text-sm font-medium text-gray-700 mb-2",
+  filterLabel: "block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2",
   searchInputContainer: "relative",
   searchIcon: "absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none",
-  searchInput: "w-full rounded-xl border border-gray-300 pl-10 pr-4 py-3 bg-white/50 backdrop-blur-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200",
-  selectInput: "w-full rounded-xl border border-gray-300 px-4 py-3 bg-white/50 backdrop-blur-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200",
+  searchInput: "w-full rounded-xl border border-gray-300 dark:border-gray-600 pl-10 pr-4 py-3 bg-white/50 dark:bg-gray-700/50 text-gray-900 dark:text-gray-100 placeholder-gray-400 backdrop-blur-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200",
+  selectInput: "w-full rounded-xl border border-gray-300 dark:border-gray-600 px-4 py-3 bg-white/50 dark:bg-gray-700/50 text-gray-900 dark:text-gray-100 backdrop-blur-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200",
 
   // Date Range
   dateRangeContainer: "lg:col-span-2",
   dateRangeFlex: "flex flex-col sm:flex-row sm:items-center gap-3",
-  dateInput: "w-full sm:flex-1 min-w-0 rounded-xl border border-gray-300 px-4 py-3 bg-white/50 backdrop-blur-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200",
+  dateInput: "w-full sm:flex-1 min-w-0 rounded-xl border border-gray-300 dark:border-gray-600 px-4 py-3 bg-white/50 dark:bg-gray-700/50 text-gray-900 dark:text-gray-100 backdrop-blur-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200",
   dateSeparator: "flex items-center justify-center",
   dateSeparatorText: "text-gray-400 text-sm",
 
   // Filters Footer
-  filtersFooter: "flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mt-6 pt-6 border-t border-gray-200/60",
+  filtersFooter: "flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mt-6 pt-6 border-t border-gray-200/60 dark:border-gray-700/60",
   perPageContainer: "flex items-center gap-3",
-  perPageLabel: "text-sm font-medium text-gray-700",
-  perPageSelect: "rounded-xl border border-gray-300 px-4 py-2 bg-white/50 backdrop-blur-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200",
-  resetButton: "inline-flex items-center gap-2 px-4 py-2 rounded-xl border border-gray-300 text-gray-700 hover:bg-gray-50 transition-all duration-200 font-medium",
+  perPageLabel: "text-sm font-medium text-gray-700 dark:text-gray-300",
+  perPageSelect: "rounded-xl border border-gray-300 dark:border-gray-600 px-4 py-2 bg-white/50 dark:bg-gray-700/50 text-gray-900 dark:text-gray-100 backdrop-blur-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200",
+  resetButton: "inline-flex items-center gap-2 px-4 py-2 rounded-xl border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 transition-all duration-200 font-medium",
 
   // Table Section
-  tableCard: "bg-white/80 backdrop-blur-xl rounded-2xl border border-gray-200/60 shadow-sm overflow-hidden",
-  tableHeader: "px-6 py-5 border-b border-gray-200/60",
+  tableCard: "bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl rounded-2xl border border-gray-200/60 dark:border-gray-700/60 shadow-sm overflow-hidden",
+  tableHeader: "px-6 py-5 border-b border-gray-200/60 dark:border-gray-700/60",
   tableHeaderContent: "flex items-center justify-between",
-  tableTitle: "text-lg font-semibold text-gray-900",
-  tableSubtitle: "text-sm text-gray-600 mt-1",
-  tableSubtitleBold: "font-medium text-gray-900",
+  tableTitle: "text-lg font-semibold text-gray-900 dark:text-gray-100",
+  tableSubtitle: "text-sm text-gray-600 dark:text-gray-400 mt-1",
+  tableSubtitleBold: "font-medium text-gray-900 dark:text-gray-100",
 
   // Table
   tableContainer: "overflow-x-auto",
   table: "w-full",
-  tableHead: "bg-gray-50/80 border-b border-gray-200/60",
-  tableHeaderCell: "cursor-pointer px-6 py-4 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider hover:bg-gray-100/50 transition-colors duration-150",
-  tableHeaderCellRight: "px-6 py-4 text-right text-xs font-semibold text-gray-500 uppercase tracking-wider",
+  tableHead: "bg-gray-50/80 dark:bg-gray-700/50 border-b border-gray-200/60 dark:border-gray-700/60",
+  tableHeaderCell: "cursor-pointer px-6 py-4 text-left text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider hover:bg-gray-100/50 dark:hover:bg-gray-600/30 transition-colors duration-150",
+  tableHeaderCellRight: "px-6 py-4 text-right text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider",
   tableHeaderContent: "flex items-center gap-2",
-  tableBody: "divide-y divide-gray-200/60",
-  tableRow: "hover:bg-gray-50/50 transition-colors duration-150 group",
+  tableBody: "divide-y divide-gray-200/60 dark:divide-gray-700/60",
+  tableRow: "hover:bg-gray-50/50 dark:hover:bg-gray-700/30 transition-colors duration-150 group",
 
   // Client Cell
   clientCell: "px-6 py-4",
   clientContainer: "flex items-center gap-4",
-  clientAvatar: "w-12 h-12 rounded-xl bg-gradient-to-br from-blue-100 to-indigo-100 flex items-center justify-center text-blue-600 font-medium group-hover:scale-110 transition-transform duration-200",
-  clientInfo: "font-medium text-gray-900 group-hover:text-blue-600 transition-colors",
-  clientId: "text-sm text-gray-500 mt-1",
-  clientEmail: "text-xs text-gray-400 mt-1 hidden md:block",
+  clientAvatar: "w-12 h-12 rounded-xl bg-gradient-to-br from-blue-100 to-indigo-100 dark:from-blue-900/40 dark:to-indigo-900/40 flex items-center justify-center text-blue-600 dark:text-blue-400 font-medium group-hover:scale-110 transition-transform duration-200",
+  clientInfo: "font-medium text-gray-900 dark:text-gray-100 group-hover:text-blue-600 transition-colors",
+  clientId: "text-sm text-gray-500 dark:text-gray-400 mt-1",
+  clientEmail: "text-xs text-gray-400 dark:text-gray-500 mt-1 hidden md:block",
 
   // Amount Cell
-  amountCell: "px-6 py-4 font-medium text-gray-900",
+  amountCell: "px-6 py-4 font-medium text-gray-900 dark:text-gray-100",
 
   // Status Cell
   statusCell: "px-6 py-4",
 
   // Date Cell
-  dateCell: "px-6 py-4 text-sm text-gray-900",
+  dateCell: "px-6 py-4 text-sm text-gray-900 dark:text-gray-300",
 
   // Actions Cell
   actionsCell: "px-6 py-4 text-right",
   actionsContainer: "flex items-center justify-end gap-2",
-  viewButton: "inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all duration-200 group/btn",
-  sendButton: "inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-blue-600 hover:text-blue-700 hover:bg-blue-50 rounded-lg transition-all duration-200 group/btn",
+  viewButton: "inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-blue-600 hover:bg-blue-50 dark:hover:bg-blue-900/20 rounded-lg transition-all duration-200 group/btn",
+  sendButton: "inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-blue-600 hover:text-blue-700 hover:bg-blue-50 dark:hover:bg-blue-900/20 rounded-lg transition-all duration-200 group/btn",
   buttonIcon: "w-4 h-4 group-hover/btn:scale-110 transition-transform",
 
   // Empty State
   emptyState: "px-6 py-12 text-center",
-  emptyStateIconContainer: "w-16 h-16 mx-auto bg-gray-100 rounded-full flex items-center justify-center",
-  emptyStateIcon: "w-8 h-8 text-gray-400",
-  emptyStateText: "text-gray-500 space-y-3",
+  emptyStateIconContainer: "w-16 h-16 mx-auto bg-gray-100 dark:bg-gray-700 rounded-full flex items-center justify-center",
+  emptyStateIcon: "w-8 h-8 text-gray-400 dark:text-gray-500",
+  emptyStateText: "text-gray-500 dark:text-gray-400 space-y-3",
   emptyStateTitle: "font-medium text-lg",
   emptyStateMessage: "text-sm max-w-md mx-auto",
   emptyStateAction: "text-blue-600 hover:text-blue-700 font-medium",
 
   // Pagination
-  paginationContainer: "px-6 py-4 bg-gray-50/80 border-t border-gray-200/60",
+  paginationContainer: "px-6 py-4 bg-gray-50/80 dark:bg-gray-700/50 border-t border-gray-200/60 dark:border-gray-700/60",
 
   // Pagination Component
-  pagination: "flex items-center justify-between mt-8 pt-6 border-t border-gray-200/60",
-  paginationText: "text-sm text-gray-600",
+  pagination: "flex items-center justify-between mt-8 pt-6 border-t border-gray-200/60 dark:border-gray-700/60",
+  paginationText: "text-sm text-gray-600 dark:text-gray-400",
   paginationControls: "flex items-center gap-2",
-  paginationButton: "flex items-center gap-2 px-4 py-2 rounded-xl border border-gray-300 text-gray-700 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200",
+  paginationButton: "flex items-center gap-2 px-4 py-2 rounded-xl border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200",
   paginationNumbers: "flex items-center gap-1",
   paginationNumber: "w-10 h-10 rounded-xl text-sm font-medium transition-all duration-200",
   paginationNumberActive: "bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-lg",
-  paginationNumberInactive: "text-gray-600 hover:bg-gray-100"
+  paginationNumberInactive: "text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700"
 };
 
 // Add to src/assets/dummyStyles.js (after the existing styles)
