@@ -48,7 +48,28 @@ function isObjectIdString(value) {
 //for helper function to upload images to public folder
 
 function uploadedFilesToUrls(req) {
-
+  // Multer has already processed the files and populated req.files like this:
+  // req.files = {
+  //   logoName: [
+  //     {
+  //       fieldname: "logoName",
+  //       originalname: "my-logo.png",
+  //       filename: "logo-1708293847123.png",   // ← Multer renamed it
+  //       path: "C:/AIINVOICE/backend/uploads/logo-1708293847123.png",
+  //       size: 45230
+  //     }
+  //   ],
+  //   stampName: [
+  //     {
+  //       fieldname: "stampName",
+  //       originalname: "my-stamp.png",
+  //       filename: "stamp-1708293847456.png",
+  //       path: "C:/AIINVOICE/backend/uploads/stamp-1708293847456.png",
+  //       size: 32100
+  //     }
+  //   ]
+  //   // signature was NOT uploaded, so it doesn't exist here
+  // }
   const urls = {};
   if (!req.files) return urls;
   //data that is used to map the uploaded file field names to the corresponding URL fields in the invoice model
@@ -70,6 +91,7 @@ function uploadedFilesToUrls(req) {
     }
   });
   return urls;
+  // WILL RETURN {logoDataUrl: "http://localhost:3000/uploads/logo-1708293847123.png", stampDataUrl: "http://localhost:3000/uploads/stamp-1708293847456.png", signatureDataUrl: "http://localhost:3000/uploads/signature-1708293847789.png"}
 }
 
 //generate a unique invoice number
@@ -83,7 +105,8 @@ async function generateUniqueInvoiceNumber(attempts = 8) {
 
     const exists = await Invoice.exists({ invoiceNumber: candidate });
     if (!exists) return candidate;
-    await new Promise((r) => setTimeout(r, 2));
+
+    await new Promise((resolve) => setTimeout(resolve, 2));
   }
 
   return new mongoose.Types.ObjectId().toString();
@@ -92,8 +115,10 @@ async function generateUniqueInvoiceNumber(attempts = 8) {
 // to create a invoice
 export async function createInvoice(req, res) {
   try {
-    //clerk auth
+    //reads jwt from incoming request and returns user id
     const { userId } = getAuth(req) || {};
+
+
     if (!userId) {
       return res
         .status(401)
@@ -101,6 +126,7 @@ export async function createInvoice(req, res) {
     }
 
     const body = req.body || {};
+    //checks if items is an array or not
     const items = Array.isArray(body.items)
       ? body.items
       : parseItemsField(body.items);
@@ -366,7 +392,7 @@ export async function updateInvoice(req, res) {
       }
     }
 
-    let items = [];
+    let items = []; // array of objects
     if (Array.isArray(body.items)) items = body.items;
     else if (typeof body.items === "string" && body.items.length) {
       try {
@@ -421,9 +447,7 @@ export async function updateInvoice(req, res) {
       notes: body.notes,
     };
 
-    Object.keys(update).forEach(
-      (key) => update[key] === undefined && delete update[key],
-    );
+    Object.keys(update).forEach((key) => update[key] === undefined && delete update[key]);
 
     const updated = await Invoice.findOneAndUpdate(
       {

@@ -12,13 +12,17 @@ const app = express();
 const port = 3000;
 
 //middleware
-app.use(express.json({limit : "20mb"}))
-app.use(express.urlencoded({limit : "20mb" , extended : true}))
+app.use(express.json({ limit: "20mb" }))
+app.use(express.urlencoded({ limit: "20mb", extended: true }))
 app.use(cors({
-  origin : '*',
-  methods : ['GET','POST','PUT','DELETE'],
-  credentials : true
+  origin: '*',
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true
 }))
+
+// Serve static files BEFORE authentication middleware
+app.use('/uploads', express.static(path.join(process.cwd(), "uploads")))
+
 app.use(clerkMiddleware());
 
 //Db
@@ -26,10 +30,9 @@ connectDb()
 
 
 // Route middlewares
-app.use('/uploads',express.static(path.join(process.cwd(),"uploads")))
-app.use('/api/invoice',invoiceRouter)
-app.use('/api/businessProfile',businessProfileRouter)
-app.use('/api/ai',aiInvoiceRouter)
+app.use('/api/invoice', invoiceRouter)
+app.use('/api/businessProfile', businessProfileRouter)
+app.use('/api/ai', aiInvoiceRouter)
 
 //routes
 app.get("/", (req, res) => res.send("Hello World!"));
